@@ -2,7 +2,9 @@
 <script language="javascript">
   if(location.hash){
     FileReader fr = new FileReader();
+    document.getElementById("test").innerText = 'a';
     fr.onLoad = function(e){
+      document.getElementById("test").innerText = 'b';
       if(e.split("\n").includes(location.hash)){
         document.getElementById("test").innerText = 'found';
       }
