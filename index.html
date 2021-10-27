@@ -1,7 +1,7 @@
 <p id="test">hi</p>
 <script language="javascript">
   if(location.hash){
-    FileReader fr = new FileReader();
+    var fr = new FileReader();
     document.getElementById("test").innerText = 'a';
     fr.onLoad = function(e){
       document.getElementById("test").innerText = 'b';
