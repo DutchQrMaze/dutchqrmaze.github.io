@@ -2,12 +2,15 @@
 <script language="javascript">
   if(location.hash){
     fetch('hashmap.txt').then( r => r.text() ).then( t => {
+      documet.getElementById("test").innerText = t;
+      /*
       if(t.split("\n").includes(location.hash)){
         document.getElementById("test").innerText = 'found';
       }
       else{
         document.getElementById("test").innerText = 'invalid';
       }
+      */
     });
   }
 </script>
