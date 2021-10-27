@@ -3,7 +3,7 @@
   if(location.hash){
     FileReader fr = new FileReader();
     fr.onLoad = function(e){
-      if(e.split("\n").contains(location.hash)){
+      if(e.split("\n").includes(location.hash)){
         document.getElementById("test").innerText = 'found';
       }
       else{
