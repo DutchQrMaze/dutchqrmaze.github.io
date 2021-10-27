@@ -1,6 +1,12 @@
 <p id="test">hi</p>
 <script language="javascript">
   if(location.hash){
-    document.getElementById("test").innerText = location.hash;
+    var arr = FileReader.readAsText("hashmap.txt").split('\n');
+    if(arr.contains(location.hash)){
+      document.getElementById("test").innerText = 'found';
+    }
+    else{
+      document.getElementById("test").innerText = 'invalid';
+    }
   }
 </script>
