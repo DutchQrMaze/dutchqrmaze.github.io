@@ -2,7 +2,7 @@
 <script language="javascript">
   if(location.hash){
     fetch('hashmap.txt').then( r => r.text() ).then( t => {
-      document.getElementById("test").innerText = t;
+      document.getElementById("test").innerText = t.split("\n")[0];
       /*
       if(t.split("\n").includes(location.hash)){
         document.getElementById("test").innerText = 'found';
